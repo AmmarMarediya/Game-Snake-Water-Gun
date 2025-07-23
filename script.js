@@ -3,8 +3,8 @@ let C_choice;
 let i = 0;
 let win = 0;
 let loss = 0;
-alert("Welcome to the Snake Water Gun Game! 🎮 \n🔕Complete 5 Rounds then final result is visiable\n☺️Enjoy game");
-confirm("Game rules📝🔴\n1. Snake beats Water\n2. Water beats Gun\n3. Gun beats Snakes\nAre you ready to play? Click OK to start or Cancel to exit.");
+confirm("🎮Welcome to the Snake Water Gun Game!\n🔕Complete 5 Rounds then final result is visiable\n☺️Enjoy game\n\nGame rules📝🔴\n1. Snake beats Water\n2. Water beats Gun\n3. Gun beats Snakes\nAre you ready to play? Click OK to start or Cancel to exit.");
+
 while (i < 5) {
   let computrChoice = Math.floor(Math.random() * 3) + 1;
 
