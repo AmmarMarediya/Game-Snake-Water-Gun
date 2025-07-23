@@ -3,11 +3,11 @@ let C_choice;
 let i = 0;
 let win = 0;
 let loss = 0;
-alert("Welcome to the Snake Water Gun Game! 🎮 🔕Complete 5 Rounds then final result is visiable\nEnjoy game");
+alert("Welcome to the Snake Water Gun Game! 🎮 \n🔕Complete 5 Rounds then final result is visiable\n☺️Enjoy game");
 confirm("Game rules📝🔴\n1. Snake beats Water\n2. Water beats Gun\n3. Gun beats Snakes\nAre you ready to play? Click OK to start or Cancel to exit.");
 while (i < 5) {
   let computrChoice = Math.floor(Math.random() * 3) + 1;
- 
+
   if (computrChoice == 1) {
     C_choice = "Snake";
   } else if (computrChoice == 2) {
@@ -16,21 +16,22 @@ while (i < 5) {
     C_choice = "Gun";
   }
   u_Choice = prompt("⌨️Enter Snake, Water or Gun");
-
+  u_Choice = u_Choice.trim();
+  u_Choice = u_Choice.charAt(0).toUpperCase() + u_Choice.slice(1);
   let ulogo;
   let clogo;
   // Displaying the user's choice with emoji
-  if(u_Choice == "Snake"){
+  if (u_Choice == "Snake") {
     ulogo = "🐍";
-  } else if(u_Choice == "Water"){
+  } else if (u_Choice == "Water") {
     ulogo = "💦";
   } else {
     ulogo = "🔫";
   }
-// Displaying the computer's choice with emoji
-  if(C_choice == "Snake"){
+  // Displaying the computer's choice with emoji
+  if (C_choice == "Snake") {
     clogo = "🐍";
-  } else if(C_choice == "Water"){
+  } else if (C_choice == "Water") {
     clogo = "💦";
   } else {
     clogo = "🔫";
@@ -64,14 +65,14 @@ while (i < 5) {
   } else {
     alert("Invalid input❌");
   }
-  
+
   i++;
 }
 alert(`🧮Total Wins: ${win}, Total Losses: ${loss}`);
 if (win > loss) {
-    alert("You are the overall winner!🎉🥳");
+  alert("You are the overall winner!🎉🥳");
 } else if (loss > win) {
-    alert("You are the overall loser!😢");
+  alert("You are the overall loser!😢");
 } else {
-    alert("The game is a tie!🤝");
+  alert("The game is a tie!🤝");
 }
